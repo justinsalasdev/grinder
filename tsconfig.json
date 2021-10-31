@@ -1,0 +1,7 @@
+{
+  "compilerOptions": {
+    // "types": ["mocha","chai"],
+    "target": "es2021",
+    "allowSyntheticDefaultImports": true
+  }
+}

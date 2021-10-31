@@ -1,5 +1,5 @@
 //O(n^2)T & O(1) space
-function twoNumberSum(input: number[], target: number) {
+export default function twoNumberSum(input: number[], target: number) {
   for (let i = 0; i < input.length; i++) {
     const firstNum = input[i];
     for (let j = i + 1; j < input.length; j++) {
