@@ -1,16 +1,10 @@
 import { BST } from "./sol.test";
 
-export default function findClosestValue(root: BST, target: number) {
-  return exploreNode(root, target, root.value);
-}
-
-function exploreNode(
+export default function findClosestValue(
   node: BST | null,
   target: number,
-  closest: number
-): number {
-  console.log("current", node?.value, closest);
-  //nothing to explore further
+  closest = Number.MAX_SAFE_INTEGER
+) {
   if (node === null) {
     return closest;
   }
@@ -19,9 +13,9 @@ function exploreNode(
     closest = node.value;
   }
   if (node.value < target) {
-    return exploreNode(node.right, target, closest);
+    return findClosestValue(node.right, target, closest);
   } else if (target < node.value) {
-    return exploreNode(node.left, target, closest);
+    return findClosestValue(node.left, target, closest);
   } else {
     return closest;
   }
