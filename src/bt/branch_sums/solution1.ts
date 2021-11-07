@@ -1,5 +1,6 @@
-import { BinaryTree } from "./sol.test";
+import { BinaryTree } from "../BinaryTree";
 
+//O(n) time | O(n) space
 export default function branchSums(
   node: BinaryTree | null,
   running = 0,
