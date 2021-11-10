@@ -4,7 +4,6 @@ export default function binary_gap(num: number) {
 }
 
 function get_gap(digits: string[], gaps: number[]): number | void {
-  console.log(gaps);
   //find the first "1"
   const first = digits.indexOf("1");
 
