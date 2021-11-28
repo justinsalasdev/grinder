@@ -6,17 +6,13 @@ export default function get_winner(
   // Write your code here.
   const tally: Tally = competitions.reduce((prev, curr, i) => {
     const [home, away] = curr;
-    if (results[i] === 1) {
-      prev[home] ||= Number.MIN_VALUE;
-      prev[home] &&= prev[home] + 1;
-    } else {
-      prev[away] ||= Number.MIN_VALUE;
-      prev[away] &&= prev[away] + 1;
-    }
+    const winner = results[i] === 1 ? home : away;
+    prev[winner] ||= Number.MIN_VALUE;
+    prev[winner] &&= prev[winner] + 1;
+
     return prev;
   }, {} as Tally);
 
-  console.log(tally);
   const winner = { score: 0, name: "" };
 
   for (let team in tally) {
