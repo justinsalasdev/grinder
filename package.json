@@ -1,6 +1,7 @@
 {
   "scripts": {
-    "test": "mocha -r ts-node/register 'src/**/*test.ts'"
+    "test": "mocha -r ts-node/register 'src/**/*test.ts'",
+    "sol": "yarn ts-node src/heaps/min_heap_construction/solution.ts"
   },
   "devDependencies": {
     "@types/chai": "^4.2.22",
