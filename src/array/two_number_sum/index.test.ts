@@ -1,9 +1,7 @@
 import * as chai from "chai";
-import twoNumberSum1 from "./solution1";
-import twoNumberSum2 from "./solution2";
-import twoNumberSum3 from "./solution3";
+import * as sols from "./index";
 
-const solutions = [twoNumberSum1, twoNumberSum2, twoNumberSum3];
+const solutions = [sols.solution1, sols.solution2, sols.solution3];
 
 solutions.forEach((solution, index) => {
   it(`two_number_sum sol${index + 1} test`, function () {
