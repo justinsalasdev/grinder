@@ -35,5 +35,3 @@ function getBound(string: string, f: number, r: number): Bound {
   }
   return [f + 1, r - 1]; // f & r overshoots by 1 to break loop
 }
-
-solution1("abaxyzzyxf");
